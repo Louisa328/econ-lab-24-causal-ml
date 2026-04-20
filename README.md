@@ -33,8 +33,8 @@ econ-lab-24-causal-ml/
 
 **Part B — Package-Based DML with Sensitivity Analysis**
 - Estimated ATE of 401(k) eligibility (`e401`) on net financial assets (`net_tfa`) using the `DoubleML` package
-- Nuisance learners: `RandomForestRegressor` for $E[Y|X]$, `RandomForestClassifier` for $E[D|X]$; 5-fold cross-fitting
-- Excluded `p401` (participation) from covariates to avoid over-control bias on the $e401 \to \text{net\_tfa}$ pathway
+- Nuisance learners: `RandomForestRegressor` for E[Y|X], `RandomForestClassifier` for E[D|X]; 5-fold cross-fitting
+- Excluded `p401` (participation) from covariates to avoid over-control bias on the pathway
 - Ran sensitivity analysis (`cf_y=0.03, cf_d=0.03`) to assess robustness to unobserved confounders
 
 **Part C — Causal Forest CATE Estimation**
